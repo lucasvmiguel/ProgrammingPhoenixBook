@@ -1,0 +1,4 @@
+sudo docker pull postgres
+mix ecto.create
+mix ecto.migrate
+sudo docker run -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -d -v /home/lucas/docker_data:/var/lib/postgresql/data postgres
